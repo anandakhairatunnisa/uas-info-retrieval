@@ -68,7 +68,7 @@ streamlit run app.py
 
 ## Repository GitHub
 
-https://github.com/anandakhairatunnisa/uas-info-retrieval
+https://github.com/anandakhairatunnisa/uas-info-retrieval.git
 
 ---
 
@@ -78,4 +78,4 @@ https://github.com/anandakhairatunnisa/uas-info-retrieval
 
 Contoh:
 
-https://uas-info-retrieval.streamlit.app
+https://uas-info-retrieval.streamlit.app/
