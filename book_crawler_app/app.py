@@ -2,7 +2,8 @@ import streamlit as st
 import json
 import os
 
-DATA_PATH = "data/books.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(BASE_DIR, "data", "books.json")
 
 st.set_page_config(page_title="Book Search (Scraped via Scrapy)", layout="wide")
 st.title("📚 Book Search (Scraped via Scrapy)")
@@ -12,9 +13,8 @@ if os.path.exists(DATA_PATH):
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 else:
-    st.warning("Data belum tersedia. Jalankan crawler terlebih dahulu.")
+    st.error(f"Data tidak ditemukan: {DATA_PATH}")
     st.stop()
-
 # Input pencarian
 query = st.text_input("Cari...", "")
 
